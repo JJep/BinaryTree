@@ -149,7 +149,6 @@ void preOrderTraverse2 (binaryTree T, treeStack &treeStack){
         }
         if(empty(treeStack) != OK)
         {
-            getTop(treeStack, *Tree);
             pop(treeStack, *Tree);
             T = Tree;
             T = T -> rightChild;
