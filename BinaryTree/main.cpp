@@ -125,18 +125,6 @@ void postOrderTraverse (binaryTree T) {
 
 //MARK: 非递归方法遍历二叉树
 void preOrderTraverse2 (binaryTree T, treeStack &treeStack){
-//    while ( T != NULL) {
-//        push(treeStack, *T);
-//        cout << T -> data;
-//        preOrderTraverse2(T -> leftChild, treeStack);
-//        preOrderTraverse2(T -> rightChild, treeStack);
-//        pop(treeStack, *T);
-//        getTop(treeStack, *T);
-////        preOrderTraverse2(T -> rightChild, treeStack);
-////        pop(treeStack, *T);
-////        getTop(treeStack, *T);
-//        
-//    }
     binaryTree Tree;
     Tree = (binaryTree)malloc(sizeof(binaryTreeNode));
     while(T!=NULL||!empty(treeStack))
@@ -156,6 +144,9 @@ void preOrderTraverse2 (binaryTree T, treeStack &treeStack){
     }
 }
 
+void InOrderTraverse2 () {
+     
+}
 
 int main(int argc, const char * argv[]) {
     binaryTree tree;
@@ -164,9 +155,12 @@ int main(int argc, const char * argv[]) {
     tree = createBinaryTree();
     cout << "Hello, World!\n";
     preOrderTraverse(tree);
-    preOrderTraverse2(tree, stack);
-//    inOrderTraverse(tree);
-//    postOrderTraverse(tree);
+    cout << "\n";
+//    preOrderTraverse2(tree, stack);
+    inOrderTraverse(tree);
+    cout << "\n";
+    postOrderTraverse(tree);
+    cout << "\n";
     return 0;
 }
 
